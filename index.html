@@ -4,72 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viaturas Importadas | EcoImport — Importação de Automóveis</title>
-<meta name="description" content="Catálogo de viaturas importadas com garantia oficial. Mercedes-Benz, Audi, Porsche, Range Rover. Serviço chave-na-mão.">
+<meta name="description" content="Catálogo de viaturas importadas com garantia oficial. Mercedes-Benz, Audi, Porsche, Range Rover. Serviço chave-na-mão EcoImport.">
 <link rel="icon" href="https://ecoimport.pt/wp-content/uploads/2024/09/cropped-favicon-ecoimport-32x32.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0D1117;color:#fff;min-height:100vh}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0D1117;color:#fff;min-height:100vh;padding-bottom:72px}
 a{text-decoration:none;color:inherit}
 
+/* Header */
 .header{border-bottom:1px solid rgba(255,255,255,.1);position:sticky;top:0;z-index:40;background:rgba(13,17,23,.95);backdrop-filter:blur(12px)}
-.header-inner{max-width:1200px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.header-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
 .logo{font-size:20px;font-weight:700;letter-spacing:-.5px}
 .logo span{color:#1B9C85}
-.logo-sub{font-size:11px;color:#8B949E;margin-top:2px}
-.header-btns{display:flex;gap:8px}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:6px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:all .2s}
-.btn-whatsapp{background:#25D366;color:#fff}
-.btn-site{background:#1B9C85;color:#fff}
-.btn:hover{opacity:.85;transform:translateY(-1px)}
+.logo-sub{font-size:11px;color:#8B949E;margin-top:1px}
+.hdr-btns{display:flex;gap:8px}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:all .2s}
+.btn:hover{opacity:.85}
+.btn-wa{background:#25D366;color:#fff}
+.btn-msg{background:#0084FF;color:#fff}
+.btn-site{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.15)}
 
-.hero{max-width:1200px;margin:0 auto;padding:48px 20px 40px}
-.hero-tag{color:#1B9C85;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
-.hero h2{font-size:clamp(28px,5vw,48px);font-weight:700;line-height:1.15;margin-bottom:16px}
-.hero h2 span{color:#1B9C85}
-.hero-desc{color:#8B949E;font-size:17px;line-height:1.6;max-width:540px;margin-bottom:32px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.btn-lg{padding:12px 28px;font-size:15px;border-radius:8px}
-.btn-outline{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.15)}
+/* Hero */
+.hero{max-width:1100px;margin:0 auto;padding:44px 20px 36px}
+.hero-tag{color:#1B9C85;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px}
+.hero h2{font-size:clamp(26px,5vw,44px);font-weight:700;line-height:1.15;margin-bottom:14px}
+.hero h2 em{color:#1B9C85;font-style:normal}
+.hero-desc{color:#8B949E;font-size:16px;line-height:1.6;max-width:500px;margin-bottom:28px}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn-lg{padding:12px 26px;font-size:14px;border-radius:10px}
 
-.sep{height:1px;background:rgba(255,255,255,.1);max-width:1200px;margin:0 auto}
+/* Separator */
+.sep{height:1px;background:rgba(255,255,255,.08);max-width:1100px;margin:0 auto}
 
-.filters{max-width:1200px;margin:0 auto;padding:20px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.filter-pills{display:flex;gap:8px;flex-wrap:wrap}
-.pill{padding:8px 18px;border-radius:20px;font-size:13px;font-weight:500;background:rgba(255,255,255,.05);color:#8B949E;border:none;cursor:pointer;transition:all .2s}
+/* Sort bar */
+.toolbar{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.filter-pills{display:flex;gap:6px;flex-wrap:wrap}
+.pill{padding:7px 16px;border-radius:20px;font-size:12px;font-weight:500;background:rgba(255,255,255,.05);color:#8B949E;border:none;cursor:pointer;transition:all .2s}
 .pill:hover{background:rgba(255,255,255,.1);color:#fff}
-.pill.active{background:#1B9C85;color:#0D1117}
-.filter-count{color:#8B949E;font-size:13px}
-.sort-btns{display:flex;gap:6px}
+.pill.active{background:#1B9C85;color:#0D1117;font-weight:600}
+.sort-pills{display:flex;gap:6px}
+.count{color:#8B949E;font-size:13px;margin-right:8px}
 
-.grid{max-width:1200px;margin:0 auto;padding:0 20px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+/* Grid */
+.grid{max-width:1100px;margin:0 auto;padding:4px 20px 48px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
 
+/* Card */
 .card{background:#161B22;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.06);transition:all .3s}
-.card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(27,156,133,.3)}
-.card-img{position:relative;width:100%;height:220px;overflow:hidden;background:#0D1117}
-.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
-.card:hover .card-img img{transform:scale(1.05)}
-.card-badge{position:absolute;top:12px;left:12px;background:rgba(27,156,133,.9);backdrop-filter:blur(8px);color:#fff;padding:6px 14px;border-radius:6px;font-size:13px;font-weight:700}
-.card-fuel{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.7);backdrop-filter:blur(8px);color:#8B949E;padding:4px 10px;border-radius:4px;font-size:11px;font-weight:500}
-.card-body{padding:16px 18px 18px}
-.card-title{font-size:16px;font-weight:600;margin-bottom:6px;line-height:1.3}
-.card-specs{display:flex;gap:12px;color:#8B949E;font-size:12px;margin-bottom:14px;flex-wrap:wrap}
-.card-specs span{display:flex;align-items:center;gap:4px}
-.card-actions{display:flex;gap:8px}
-.card-btn{flex:1;padding:10px;border-radius:6px;font-size:12px;font-weight:600;text-align:center;transition:all .2s;border:none;cursor:pointer}
-.card-btn-wa{background:#25D366;color:#fff}
-.card-btn-site{background:rgba(27,156,133,.15);color:#1B9C85;border:1px solid rgba(27,156,133,.3)}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.4);border-color:rgba(27,156,133,.3)}
+.card-img{position:relative;aspect-ratio:16/10;overflow:hidden;background:#0D1117}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.card:hover .card-img img{transform:scale(1.03)}
+.badge-price{position:absolute;top:10px;left:10px;background:#1B9C85;color:#fff;padding:5px 12px;border-radius:6px;font-size:14px;font-weight:700}
+.badge-year{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);color:#fff;padding:4px 10px;border-radius:4px;font-size:11px;font-weight:500;border:1px solid rgba(255,255,255,.15)}
+.card-body{padding:14px 16px 16px}
+.card-title{font-size:15px;font-weight:700;margin-bottom:2px;line-height:1.3}
+.card-highlight{color:#1B9C85;font-size:13px;margin-bottom:10px}
+.card-specs{display:flex;flex-wrap:wrap;gap:8px 14px;color:#8B949E;font-size:12px;margin-bottom:14px}
+.card-btns{display:flex;gap:8px}
+.card-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:5px;padding:10px 0;border-radius:8px;font-size:12px;font-weight:600;border:none;cursor:pointer;transition:all .2s}
 .card-btn:hover{opacity:.85}
+.cbtn-wa{background:#25D366;color:#fff}
+.cbtn-msg{background:#0084FF;color:#fff}
 
-.footer{border-top:1px solid rgba(255,255,255,.1);padding:30px 20px;text-align:center;color:#8B949E;font-size:13px}
-.footer a{color:#1B9C85}
+/* Trust */
+.trust{border-top:1px solid rgba(255,255,255,.08);background:#161B22}
+.trust-inner{max-width:1100px;margin:0 auto;padding:40px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+.trust-num{font-size:28px;font-weight:700;color:#1B9C85}
+.trust-label{font-size:12px;color:#8B949E;margin-top:4px}
 
-.no-results{text-align:center;padding:60px 20px;color:#8B949E;font-size:16px}
+/* Footer */
+.footer{border-top:1px solid rgba(255,255,255,.08);max-width:1100px;margin:0 auto;padding:32px 20px}
+.footer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.footer h4{font-weight:700;font-size:15px;margin-bottom:10px}
+.footer p,.footer a{font-size:13px;color:#8B949E;line-height:1.8}
+.footer a:hover{color:#fff}
+.footer .green{color:#1B9C85}
+.footer-copy{border-top:1px solid rgba(255,255,255,.08);margin-top:24px;padding-top:20px;text-align:center;font-size:11px;color:#8B949E}
 
-@media(max-width:640px){
-.hero{padding:32px 16px 24px}
-.grid{grid-template-columns:1fr;padding:0 16px 40px}
-.header-inner{padding:12px 16px}
-.filters{padding:16px}
+/* Fixed bottom bar */
+.bottom-bar{position:fixed;bottom:0;left:0;right:0;z-index:50;background:rgba(13,17,23,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(255,255,255,.1);padding:8px 12px;padding-bottom:max(8px,env(safe-area-inset-bottom))}
+.bottom-bar-inner{max-width:1100px;margin:0 auto;display:flex;gap:8px}
+.bb-btn{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 0;border-radius:10px;font-size:13px;font-weight:600;border:none;cursor:pointer;transition:all .2s}
+.bb-btn:hover{opacity:.85}
+.bb-msg{background:#0084FF;color:#fff;flex:1}
+.bb-tel{background:#fff;color:#0D1117;flex:1.3;font-weight:700}
+.bb-wa{background:#25D366;color:#fff;flex:1}
+.bb-btn svg{width:18px;height:18px;fill:currentColor}
+
+.no-results{text-align:center;padding:60px 20px;color:#8B949E}
+
+@media(max-width:768px){
+.hero{padding:28px 16px 24px}
+.grid{grid-template-columns:1fr;padding:4px 16px 40px}
+.trust-inner{grid-template-columns:repeat(2,1fr)}
+.footer-grid{grid-template-columns:1fr}
+.hdr-btns{display:none}
 }
 </style>
 </head>
@@ -77,171 +106,172 @@ a{text-decoration:none;color:inherit}
 
 <header class="header">
 <div class="header-inner">
-<div>
-<div class="logo">ECO<span>IMPORT</span></div>
-<div class="logo-sub">Importação de Automóveis</div>
-</div>
-<div class="header-btns">
-<a href="https://wa.me/351927586636?text=Ol%C3%A1%2C%20vi%20o%20vosso%20cat%C3%A1logo%20e%20gostaria%20de%20saber%20mais." target="_blank"><button class="btn btn-whatsapp">WhatsApp</button></a>
-<a href="https://ecoimport.pt/contactos/" target="_blank"><button class="btn btn-site">ecoimport.pt</button></a>
+<div><div class="logo">ECO<span>IMPORT</span></div><div class="logo-sub">Importação de Automóveis</div></div>
+<div class="hdr-btns">
+<a href="https://wa.me/351927586636" target="_blank"><button class="btn btn-wa">WhatsApp</button></a>
+<a href="https://m.me/479529898573358" target="_blank"><button class="btn btn-msg">Messenger</button></a>
 </div>
 </div>
 </header>
 
 <section class="hero">
-<p class="hero-tag" id="count-tag"></p>
-<h2>Viaturas Importadas<br>com <span>Garantia Oficial</span></h2>
-<p class="hero-desc">Veículos importados da Europa com verificação completa, ISV e legalização incluídos. Serviço chave-na-mão.</p>
+<p class="hero-tag" id="tag"></p>
+<h2>Viaturas Importadas<br>com <em>Garantia Oficial</em></h2>
+<p class="hero-desc">Importadas da Europa com verificação completa, ISV e legalização incluídos. Serviço chave-na-mão.</p>
 <div class="hero-actions">
-<a href="https://wa.me/351927586636?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20importa%C3%A7%C3%A3o." target="_blank"><button class="btn btn-lg btn-whatsapp">Pedir Orçamento</button></a>
-<a href="https://ecoimport.pt/simulador-de-isv/" target="_blank"><button class="btn btn-lg btn-outline">Simulador ISV</button></a>
+<a href="https://m.me/479529898573358" target="_blank"><button class="btn btn-lg btn-msg">Enviar mensagem</button></a>
+<a href="tel:+351927586636"><button class="btn btn-lg btn-site">Ligar agora</button></a>
 </div>
 </section>
 
 <div class="sep"></div>
 
-<div class="filters">
+<div class="toolbar">
 <div class="filter-pills" id="filters"></div>
-<div>
-<span class="filter-count" id="filter-count"></span>
-<div class="sort-btns" style="display:inline-flex;margin-left:12px">
+<div style="display:flex;align-items:center">
+<span class="count" id="count"></span>
+<div class="sort-pills">
 <button class="pill active" data-sort="recente">Recentes</button>
-<button class="pill" data-sort="km">Km ↑</button>
-<button class="pill" data-sort="ano">Ano ↓</button>
+<button class="pill" data-sort="preco">Preço</button>
+<button class="pill" data-sort="km">Menos km</button>
 </div>
 </div>
 </div>
 
 <div class="grid" id="grid"></div>
 
+<section class="trust">
+<div class="trust-inner">
+<div><div class="trust-num">500+</div><div class="trust-label">Carros importados</div></div>
+<div><div class="trust-num">15</div><div class="trust-label">Em stock</div></div>
+<div><div class="trust-num">75%</div><div class="trust-label">Desconto ISV (PHEV)</div></div>
+<div><div class="trust-num">0€</div><div class="trust-label">ISV Elétricos</div></div>
+</div>
+</section>
+
 <footer class="footer">
-<p>EcoImport — Importação de Automóveis &middot; <a href="https://ecoimport.pt" target="_blank">ecoimport.pt</a> &middot; Tel: <a href="tel:+351927586636">927 586 636</a></p>
+<div class="footer-grid">
+<div>
+<h4>ECOIMPORT</h4>
+<p>Serviço de importação de automóveis da Europa para Portugal. Garantia oficial, processo completo, sem surpresas.</p>
+</div>
+<div>
+<h4>Contactos</h4>
+<p><a href="tel:+351927586636">+351 927 586 636</a></p>
+<p><a href="tel:+351964533140">+351 964 533 140</a></p>
+<p><a href="mailto:geral@ecoimport.pt">geral@ecoimport.pt</a></p>
+<p><a href="https://ecoimport.pt" target="_blank" class="green">ecoimport.pt</a></p>
+</div>
+<div>
+<h4>Morada</h4>
+<p>Fazenda da Caravela 42B, 8365-304 Alcantarilha</p>
+<p style="margin-top:8px">Seg-Sex: 09h-19h</p>
+</div>
+</div>
+<div class="footer-copy">© 2026 EcoImport · Importação de Automóveis · Todos os preços são estimativas. Consulte para valores finais.</div>
 </footer>
 
+<!-- Fixed bottom bar -->
+<div class="bottom-bar">
+<div class="bottom-bar-inner">
+<a href="https://m.me/479529898573358" target="_blank" style="flex:1"><button class="bb-btn bb-msg"><svg viewBox="0 0 24 24"><path d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.15 7.2V22l2.98-1.64c.84.23 1.73.34 2.87.34 5.64 0 10-4.13 10-9.7S17.64 2 12 2zm1.05 13.02l-2.55-2.72L5.67 15l4.93-5.23 2.55 2.72L17.95 10l-4.9 5.02z"/></svg>Messenger</button></a>
+<a href="tel:+351927586636" style="flex:1.3"><button class="bb-btn bb-tel"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>Ligar</button></a>
+<a href="https://wa.me/351927586636" target="_blank" style="flex:1"><button class="bb-btn bb-wa"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>WhatsApp</button></a>
+</div>
+</div>
+
 <script>
-const vehicles = [
-  {id:5424,title:"Mercedes-Benz EQC 400 4Matic AMG",marca:"Mercedes-Benz",modelo:"EQC 400 4Matic AMG",ano:2022,combustivel:"100% Elétrico",potencia:"408cv",km:"13.660",link:"https://ecoimport.pt/importacoes/mercedes-eqc-400-amg-2022/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_5213-1024x576.jpg"},
-  {id:5413,title:"Mercedes-Benz GLC 300de 4Matic",marca:"Mercedes-Benz",modelo:"GLC 300de 4Matic",ano:2020,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"306cv / 1993 cm3",km:"196.197",link:"https://ecoimport.pt/importacoes/mercedes-glc-300de-4matic-2020/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_5366-1024x576.jpg"},
-  {id:5402,title:"Mercedes-Benz C 300e T AMG 2024",marca:"Mercedes-Benz",modelo:"C 300e T AMG",ano:2024,combustivel:"Híbrido Plug-in / Gasolina",potencia:"333cv / 1999 cm3",km:"11.780",link:"https://ecoimport.pt/importacoes/mercedes-c300e-t-amg-2024/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_3233-1024x576.jpg"},
-  {id:5391,title:"Mercedes-Benz CLA 250e Shooting Brake AMG",marca:"Mercedes-Benz",modelo:"CLA 250e SB AMG",ano:2022,combustivel:"Híbrido Plug-in / Gasolina",potencia:"218cv / 1332 cm3",km:"36.595",link:"https://ecoimport.pt/importacoes/mercedes-cla-250e-sb-amg-2022/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_3304-1024x576.jpg"},
-  {id:4717,title:"Mercedes-Benz E300de T AMG",marca:"Mercedes-Benz",modelo:"E300de T AMG",ano:2021,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"306cv / 1950 cm3",km:"96.000",link:"https://ecoimport.pt/importacoes/mercedes-benz-e300de-t-amg/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/1-2-1024x576.png"},
-  {id:4653,title:"Mercedes-Benz EQA 250 AMG",marca:"Mercedes-Benz",modelo:"EQA 250 AMG",ano:2022,combustivel:"100% Elétrico",potencia:"190cv",km:"18.000",link:"https://ecoimport.pt/importacoes/mercedes-benz-eqa-250/",img:"https://ecoimport.pt/wp-content/uploads/2026/01/50-1024x576.png"},
-  {id:4638,title:"Mercedes-Benz E300de AMG",marca:"Mercedes-Benz",modelo:"E300de AMG",ano:2022,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"306cv / 1950 cm3",km:"65.000",link:"https://ecoimport.pt/importacoes/mercedes-benz-e300de-amg/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/36-1024x576.png"},
-  {id:4584,title:"Mercedes-Benz GLE 350 de",marca:"Mercedes-Benz",modelo:"GLE 350 de",ano:2023,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"320cv / 1950 cm3",km:"67.000",link:"https://ecoimport.pt/importacoes/mercedes-benz-gle-350-de/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/66-1-1024x576.png"},
-  {id:4525,title:"Audi A6 Sedan 50",marca:"Audi",modelo:"A6 Sedan 50 TFSI e",ano:2020,combustivel:"Híbrido Plug-in / Gasolina",potencia:"299cv / 1984 cm3",km:"107.000",link:"https://ecoimport.pt/importacoes/audi-a6-sedan-50/",img:"https://ecoimport.pt/wp-content/uploads/2025/11/mercedes-e300e-50-23-1-1-1024x768.jpg"},
-  {id:4480,title:"Mercedes-Benz GLC 300de",marca:"Mercedes-Benz",modelo:"GLC 300de 4MATIC",ano:2020,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"306cv / 1950 cm3",km:"112.000",link:"https://ecoimport.pt/importacoes/mercedes-benz-glc-300de/",img:"https://ecoimport.pt/wp-content/uploads/2025/10/mercedes-benz-GLC-300de-21-1-1024x768.jpg"},
-  {id:4435,title:"Mini Cooper Countryman",marca:"Mini",modelo:"Cooper Countryman",ano:2012,combustivel:"Gasolina",potencia:"122cv / 1499 cm3",km:"109.000",link:"https://ecoimport.pt/importacoes/mini-cooper-countryman/",img:"https://ecoimport.pt/wp-content/uploads/2025/09/Mini-countryman-1024x576.png"},
-  {id:4420,title:"Mercedes-Benz E300e",marca:"Mercedes-Benz",modelo:"E300e",ano:2021,combustivel:"Híbrido Plug-in / Gasolina",potencia:"320cv / 1991 cm3",km:"62.000",link:"https://ecoimport.pt/importacoes/mercedes-e300-de-amg-station/",img:"https://ecoimport.pt/wp-content/uploads/2025/11/mercedes-e300e-11-2-Medium.jpg"},
-  {id:4351,title:"Range Rover Sport 3.0e",marca:"Land Rover",modelo:"Range Rover Sport P440e",ano:2023,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"441cv / 2296 cm3",km:"45.000",link:"https://ecoimport.pt/importacoes/range-rover-sport/",img:"https://ecoimport.pt/wp-content/uploads/2025/03/range-rover-01-1024x768.jpg"},
-  {id:4159,title:"Mercedes-Benz C300de AMG",marca:"Mercedes-Benz",modelo:"C300de AMG",ano:2021,combustivel:"Híbrido Plug-in / Gasóleo",potencia:"306cv / 1950 cm3",km:"99.000",link:"https://ecoimport.pt/importacoes/mercedes-c300-de-amg/",img:"https://ecoimport.pt/wp-content/uploads/2024/10/mercedes-c300-08-1024x768.jpg"},
-  {id:3505,title:"Porsche Macan S",marca:"Porsche",modelo:"Macan S",ano:2018,combustivel:"Diesel",potencia:"230cv / 3000 cm3",km:"160.000",link:"https://ecoimport.pt/importacoes/porsche-macan/",img:"https://ecoimport.pt/wp-content/uploads/2024/10/porche-macan-10-1024x768.jpg"}
+const V=[
+{id:5424,t:"Mercedes-Benz EQC 400 4Matic AMG",m:"Mercedes-Benz",ano:2022,fuel:"100% Elétrico",pot:"408cv",km:13660,kms:"13.660",price:42000,priceNat:52000,hl:"Isento de ISV · 408cv",link:"https://ecoimport.pt/importacoes/mercedes-eqc-400-amg-2022/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_5213-1024x576.jpg"},
+{id:5413,t:"Mercedes-Benz GLC 300de 4Matic",m:"Mercedes-Benz",ano:2020,fuel:"PHEV Gasóleo",pot:"306cv / 1993 cm3",km:196197,kms:"196.197",price:0,priceNat:0,hl:"75% desconto ISV · 4Matic",link:"https://ecoimport.pt/importacoes/mercedes-glc-300de-4matic-2020/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_5366-1024x576.jpg"},
+{id:5402,t:"Mercedes-Benz C 300e T AMG 2024",m:"Mercedes-Benz",ano:2024,fuel:"PHEV Gasolina",pot:"333cv / 1999 cm3",km:11780,kms:"11.780",price:0,priceNat:0,hl:"333cv sistema combinado · Station AMG",link:"https://ecoimport.pt/importacoes/mercedes-c300e-t-amg-2024/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_3233-1024x576.jpg"},
+{id:5391,t:"Mercedes-Benz CLA 250e Shooting Brake AMG",m:"Mercedes-Benz",ano:2022,fuel:"PHEV Gasolina",pot:"218cv / 1332 cm3",km:36595,kms:"36.595",price:0,priceNat:0,hl:"Shooting Brake AMG · 75% desconto ISV",link:"https://ecoimport.pt/importacoes/mercedes-cla-250e-sb-amg-2022/",img:"https://ecoimport.pt/wp-content/uploads/2026/03/IMG_3304-1024x576.jpg"},
+{id:4717,t:"Mercedes-Benz E300de T AMG",m:"Mercedes-Benz",ano:2021,fuel:"PHEV Gasóleo",pot:"306cv / 1950 cm3",km:96000,kms:"96.000",price:0,priceNat:0,hl:"Station AMG · 75% desconto ISV",link:"https://ecoimport.pt/importacoes/mercedes-benz-e300de-t-amg/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/1-2-1024x576.png"},
+{id:4653,t:"Mercedes-Benz EQA 250 AMG",m:"Mercedes-Benz",ano:2022,fuel:"100% Elétrico",pot:"190cv",km:18000,kms:"18.000",price:32770,priceNat:37770,hl:"Isento de ISV · AMG Line",link:"https://ecoimport.pt/importacoes/mercedes-benz-eqa-250/",img:"https://ecoimport.pt/wp-content/uploads/2026/01/50-1024x576.png"},
+{id:4638,t:"Mercedes-Benz E300de AMG",m:"Mercedes-Benz",ano:2022,fuel:"PHEV Gasóleo",pot:"306cv / 1950 cm3",km:65000,kms:"65.000",price:0,priceNat:0,hl:"Berlina AMG · 75% desconto ISV",link:"https://ecoimport.pt/importacoes/mercedes-benz-e300de-amg/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/36-1024x576.png"},
+{id:4584,t:"Mercedes-Benz GLE 350 de",m:"Mercedes-Benz",ano:2023,fuel:"PHEV Gasóleo",pot:"320cv / 1950 cm3",km:67000,kms:"67.000",price:73000,priceNat:81000,hl:"SUV Premium · Poupança 8.000€",link:"https://ecoimport.pt/importacoes/mercedes-benz-gle-350-de/",img:"https://ecoimport.pt/wp-content/uploads/2025/12/66-1-1024x576.png"},
+{id:4525,t:"Audi A6 50 TFSI e",m:"Audi",ano:2020,fuel:"PHEV Gasolina",pot:"299cv / 1984 cm3",km:107000,kms:"107.000",price:0,priceNat:0,hl:"75% desconto ISV · Premium",link:"https://ecoimport.pt/importacoes/audi-a6-sedan-50/",img:"https://ecoimport.pt/wp-content/uploads/2025/11/mercedes-e300e-50-23-1-1-1024x768.jpg"},
+{id:4480,t:"Mercedes-Benz GLC 300de 4MATIC",m:"Mercedes-Benz",ano:2020,fuel:"PHEV Gasóleo",pot:"306cv / 1950 cm3",km:112000,kms:"112.000",price:0,priceNat:0,hl:"4MATIC · 75% desconto ISV",link:"https://ecoimport.pt/importacoes/mercedes-benz-glc-300de/",img:"https://ecoimport.pt/wp-content/uploads/2025/10/mercedes-benz-GLC-300de-21-1-1024x768.jpg"},
+{id:4435,t:"Mini Cooper Countryman",m:"Mini",ano:2012,fuel:"Gasolina",pot:"122cv / 1499 cm3",km:109000,kms:"109.000",price:0,priceNat:0,hl:"Compacto versátil",link:"https://ecoimport.pt/importacoes/mini-cooper-countryman/",img:"https://ecoimport.pt/wp-content/uploads/2025/09/Mini-countryman-1024x576.png"},
+{id:4420,t:"Mercedes-Benz E300e",m:"Mercedes-Benz",ano:2021,fuel:"PHEV Gasolina",pot:"320cv / 1991 cm3",km:62000,kms:"62.000",price:0,priceNat:0,hl:"75% desconto ISV · 320cv",link:"https://ecoimport.pt/importacoes/mercedes-e300-de-amg-station/",img:"https://ecoimport.pt/wp-content/uploads/2025/11/mercedes-e300e-11-2-Medium.jpg"},
+{id:4351,t:"Range Rover Sport P440e",m:"Land Rover",ano:2023,fuel:"PHEV",pot:"441cv / 2296 cm3",km:45000,kms:"45.000",price:0,priceNat:0,hl:"441cv · Dynamic HSE · Premium",link:"https://ecoimport.pt/importacoes/range-rover-sport/",img:"https://ecoimport.pt/wp-content/uploads/2025/03/range-rover-01-1024x768.jpg"},
+{id:4159,t:"Mercedes-Benz C300de AMG",m:"Mercedes-Benz",ano:2021,fuel:"PHEV Gasóleo",pot:"306cv / 1950 cm3",km:99000,kms:"99.000",price:0,priceNat:0,hl:"AMG · 75% desconto ISV",link:"https://ecoimport.pt/importacoes/mercedes-c300-de-amg/",img:"https://ecoimport.pt/wp-content/uploads/2024/10/mercedes-c300-08-1024x768.jpg"},
+{id:3505,t:"Porsche Macan S",m:"Porsche",ano:2018,fuel:"Diesel",pot:"230cv / 3000 cm3",km:160000,kms:"160.000",price:52478,priceNat:60978,hl:"Desportivo premium · V6 Turbo",link:"https://ecoimport.pt/importacoes/porsche-macan/",img:"https://ecoimport.pt/wp-content/uploads/2024/10/porche-macan-10-1024x768.jpg"}
 ];
 
-const waBase = "https://wa.me/351927586636?text=";
+const wa="https://wa.me/351927586636?text=";
+const msg="https://m.me/479529898573358";
+
+function fmt(n){return n.toLocaleString('pt-PT')+' €'}
 
 // Filters
-const marcas = [...new Set(vehicles.map(v=>v.marca))].sort();
-const combustiveis = [...new Set(vehicles.map(v=>{
-  if(v.combustivel.includes('Elétrico'))return 'Elétrico';
-  if(v.combustivel.includes('Plug-in'))return 'Híbrido Plug-in';
-  if(v.combustivel.includes('Diesel'))return 'Diesel';
+const marcas=[...new Set(V.map(v=>v.m))].sort();
+const fuels=[...new Set(V.map(v=>{
+  if(v.fuel.includes('Elétrico'))return 'Elétrico';
+  if(v.fuel.includes('PHEV'))return 'PHEV';
+  if(v.fuel==='Diesel')return 'Diesel';
   return 'Gasolina';
 }))];
 
-let activeFilter = 'todos';
-let activeSort = 'recente';
+let filt='todos',sort='recente';
 
-function fuelTag(c){
-  if(c.includes('Elétrico'))return 'Elétrico';
-  if(c.includes('Plug-in'))return 'PHEV';
-  if(c.includes('Diesel'))return 'Diesel';
-  return 'Gasolina';
-}
-
-function renderFilters(){
-  const f=document.getElementById('filters');
-  let html='<button class="pill active" data-filter="todos">Todos</button>';
-  marcas.forEach(m=>{html+='<button class="pill" data-filter="marca:'+m+'">'+m+'</button>'});
-  combustiveis.forEach(c=>{html+='<button class="pill" data-filter="fuel:'+c+'">'+c+'</button>'});
-  f.innerHTML=html;
-  f.querySelectorAll('.pill').forEach(p=>{
-    p.addEventListener('click',function(){
-      f.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
-      this.classList.add('active');
-      activeFilter=this.dataset.filter;
-      render();
-    });
+function initFilters(){
+  const el=document.getElementById('filters');
+  let h='<button class="pill active" data-f="todos">Todos</button>';
+  marcas.forEach(m=>{h+='<button class="pill" data-f="m:'+m+'">'+m+'</button>'});
+  fuels.forEach(f=>{h+='<button class="pill" data-f="f:'+f+'">'+f+'</button>'});
+  el.innerHTML=h;
+  el.querySelectorAll('.pill').forEach(p=>p.onclick=function(){
+    el.querySelectorAll('.pill').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+    filt=this.dataset.f;
+    render();
   });
 }
 
-function getFiltered(){
-  let list=[...vehicles];
-  if(activeFilter!=='todos'){
-    if(activeFilter.startsWith('marca:')){
-      const m=activeFilter.split(':')[1];
-      list=list.filter(v=>v.marca===m);
-    }else if(activeFilter.startsWith('fuel:')){
-      const f=activeFilter.split(':')[1];
-      list=list.filter(v=>{
-        if(f==='Elétrico')return v.combustivel.includes('Elétrico');
-        if(f==='Híbrido Plug-in')return v.combustivel.includes('Plug-in');
-        if(f==='Diesel')return v.combustivel==='Diesel';
-        return v.combustivel==='Gasolina';
+function getList(){
+  let l=[...V];
+  if(filt!=='todos'){
+    if(filt.startsWith('m:'))l=l.filter(v=>v.m===filt.slice(2));
+    else if(filt.startsWith('f:')){
+      const f=filt.slice(2);
+      l=l.filter(v=>{
+        if(f==='Elétrico')return v.fuel.includes('Elétrico');
+        if(f==='PHEV')return v.fuel.includes('PHEV');
+        if(f==='Diesel')return v.fuel==='Diesel';
+        return v.fuel==='Gasolina';
       });
     }
   }
-  if(activeSort==='km')list.sort((a,b)=>parseInt(a.km.replace(/\D/g,''))-parseInt(b.km.replace(/\D/g,'')));
-  else if(activeSort==='ano')list.sort((a,b)=>b.ano-a.ano);
-  else list.sort((a,b)=>b.id-a.id);
-  return list;
+  if(sort==='preco')l.sort((a,b)=>(b.price||999999)-(a.price||999999));
+  else if(sort==='km')l.sort((a,b)=>a.km-b.km);
+  else l.sort((a,b)=>b.id-a.id);
+  return l;
 }
 
 function render(){
-  const list=getFiltered();
-  const grid=document.getElementById('grid');
-  document.getElementById('count-tag').textContent='Stock disponível · '+vehicles.length+' viaturas';
-  document.getElementById('filter-count').textContent=list.length+' viaturas';
-
-  if(list.length===0){
-    grid.innerHTML='<div class="no-results">Nenhuma viatura encontrada com estes filtros.</div>';
-    return;
-  }
-
-  grid.innerHTML=list.map(v=>{
-    const waMsg=encodeURIComponent('Olá, tenho interesse no '+v.title+' ('+v.ano+', '+v.km+' km). Podem enviar mais informações?');
-    return '<div class="card">'+
-      '<a href="'+v.link+'" target="_blank" class="card-img">'+
-        '<img src="'+v.img+'" alt="'+v.title+'" loading="lazy">'+
-        '<div class="card-badge">'+v.ano+'</div>'+
-        '<div class="card-fuel">'+fuelTag(v.combustivel)+'</div>'+
-      '</a>'+
-      '<div class="card-body">'+
-        '<div class="card-title">'+v.title+'</div>'+
-        '<div class="card-specs">'+
-          '<span>'+v.potencia.split('/')[0].trim()+'</span>'+
-          '<span>'+v.km+' km</span>'+
-          '<span>'+v.combustivel.split('/')[0].trim()+'</span>'+
-        '</div>'+
-        '<div class="card-actions">'+
-          '<a href="'+waBase+waMsg+'" target="_blank" class="card-btn card-btn-wa" style="flex:1;display:block">WhatsApp</a>'+
-          '<a href="'+v.link+'" target="_blank" class="card-btn card-btn-site" style="flex:1;display:block">Ver Ficha</a>'+
-        '</div>'+
-      '</div>'+
-    '</div>';
+  const list=getList();
+  document.getElementById('tag').textContent='Stock disponível · '+V.length+' viaturas';
+  document.getElementById('count').textContent=list.length+' viaturas';
+  const g=document.getElementById('grid');
+  if(!list.length){g.innerHTML='<div class="no-results">Nenhuma viatura com estes filtros.</div>';return;}
+  g.innerHTML=list.map(v=>{
+    const wm=encodeURIComponent('Olá, tenho interesse no '+v.t+' ('+v.ano+', '+v.kms+' km). Podem enviar mais informações?');
+    const priceTag=v.price?fmt(v.price):'Consulte';
+    const saving=v.price&&v.priceNat?'Poupança: '+fmt(v.priceNat-v.price):'';
+    return '<div class="card"><a href="'+v.link+'" target="_blank" class="card-img"><img src="'+v.img+'" alt="'+v.t+'" loading="lazy"><div class="badge-price">'+priceTag+'</div><div class="badge-year">'+v.ano+'</div></a><div class="card-body"><div class="card-title">'+v.t+'</div><div class="card-highlight">'+v.hl+(saving?' · '+saving:'')+'</div><div class="card-specs"><span>'+v.pot.split('/')[0].trim()+'</span><span>'+v.kms+' km</span><span>'+v.fuel+'</span></div><div class="card-btns"><a href="'+wa+wm+'" target="_blank" style="flex:1"><button class="card-btn cbtn-wa">WhatsApp</button></a><a href="'+msg+'" target="_blank" style="flex:1"><button class="card-btn cbtn-msg">Messenger</button></a></div></div></div>';
   }).join('');
 }
 
-// Sort buttons
-document.querySelectorAll('[data-sort]').forEach(b=>{
-  b.addEventListener('click',function(){
-    document.querySelectorAll('[data-sort]').forEach(x=>x.classList.remove('active'));
-    this.classList.add('active');
-    activeSort=this.dataset.sort;
-    render();
-  });
+// Sort
+document.querySelectorAll('[data-sort]').forEach(b=>b.onclick=function(){
+  document.querySelectorAll('[data-sort]').forEach(x=>x.classList.remove('active'));
+  this.classList.add('active');
+  sort=this.dataset.sort;
+  render();
 });
 
-renderFilters();
+initFilters();
 render();
 </script>
 </body>

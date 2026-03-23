@@ -289,6 +289,23 @@ function render(){
 }
 
 render();
+
+/* Track clicks: WhatsApp, Messenger, Ligar */
+document.addEventListener('click',function(e){
+  var a=e.target.closest('a[href]');
+  if(!a)return;
+  var h=a.href||'';
+  if(h.indexOf('wa.me')>=0){
+    fbq('track','Contact',{content_name:'WhatsApp',content_category:'click'});
+    fbq('trackCustom','WhatsAppClick',{source:'catalogo'});
+  }else if(h.indexOf('m.me')>=0||h.indexOf('messenger')>=0){
+    fbq('track','Contact',{content_name:'Messenger',content_category:'click'});
+    fbq('trackCustom','MessengerClick',{source:'catalogo'});
+  }else if(h.indexOf('tel:')>=0){
+    fbq('track','Contact',{content_name:'Telefone',content_category:'click'});
+    fbq('trackCustom','PhoneClick',{source:'catalogo'});
+  }
+});
 </script>
 </body>
 </html>
